@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="challenge_3.css">
+</head>
+<header>
+    <a class="button" href="#navbar" aria-label="Open main menu">
+        <span class="menu">Open main menu</span>
+        <img src="img/button.png" alt="Navigation button." aria-hidden="true"/>
+    </a>
+    <hr>
+    <hr>
+    <h1>COLOURS//DESCRIPTORS</h1>
+    <hr>
+    <hr>
+    <br>
+</header>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="http://randomcolour.com/" target="_blank">COLOURS</a></li>
+            <li><a href="https://www.dictionary.com/browse/descriptor" target="_blank">DESCRIPTORS</a></li>
+            <li><a href="#">RETURN HOME</a></li>
+            <li><a href="mailto:katia.eichberg.22@ucl.ac.uk" target="_blank">CONTACT</a></li>
+        </ul>
+        <a class="exit" href="#" aria-label="Close main menu">
+            <span class="menu">Close main menu</span>
+            <img src="img/exit.png" alt="close button."  aria-hidden="true" />
+        </a>
+    </nav>
+</section>
+<br>
+<section class="wrapper">
+    <div>
+        <ul class="grid">
+        <li>
+            <button class="box box1">HOVER OVER EACH BOX FOR A VISUAL REPRESENTATION OF:</button>
+        </li>
+        <li>
+            <button class="box box2">TEXTURE</button>
+        </li>
+        <li>
+            <button class="box box3">MOVEMENT</button>
+        </li>
+        <li>
+            <button class="box box4">SOUND</button>
+        </li>
+        <li>
+            <button class="box box5">EMOTION</button>
+        </li>
+        <li>
+            <button class="box box6">FORM</button>
+        </li>
+        </ul>
+    </div>
+<br>
+</section>
+<section class="wrapper">
+        <button type="button" class="collapsible">NEED MORE HELP WITH NAVIGATION?</button>
+        <img class="fig" src="img/nav1.png" alt="xxx." aria-hidden="true"/>
+        <button type="button" class="collapsible">STILL LOST?</button>
+        <img class="fig" src="img/nav2.png" alt="xxx." aria-hidden="true"/>
+</section>
+<!--maybe better to move script to seperate js file?-->
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var fig = this.nextElementSibling;
+        if (fig.style.display === "flex") {
+            fig.style.display = "none";
+        } else {
+            fig.style.display = "flex";
+        }
+        });
+    }
+</script>
+</body>
+<footer>
+    <p>&#9773; everything, for everyone, now.</p>
+</footer>
+</html>
