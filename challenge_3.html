@@ -31,6 +31,29 @@
 </section>
 <br>
 <section class="wrapper">
+        <button type="button" class="collapsible">NEED MORE HELP WITH NAVIGATION?</button>
+        <img class="fig" src="img/nav1.png" alt="xxx." aria-hidden="true"/>
+        <button type="button" class="collapsible">STILL LOST?</button>
+        <img class="fig" src="img/nav2.png" alt="xxx." aria-hidden="true"/>
+</section>
+<!--maybe better to move script to seperate js file?-->
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var fig = this.nextElementSibling;
+        if (fig.style.display === "flex") {
+            fig.style.display = "none";
+        } else {
+            fig.style.display = "flex";
+        }
+        });
+    }
+</script>
+<br>
+<section class="wrapper">
     <div>
         <ul class="grid">
         <li>
@@ -53,30 +76,7 @@
         </li>
         </ul>
     </div>
-<br>
 </section>
-<section class="wrapper">
-        <button type="button" class="collapsible">NEED MORE HELP WITH NAVIGATION?</button>
-        <img class="fig" src="img/nav1.png" alt="xxx." aria-hidden="true"/>
-        <button type="button" class="collapsible">STILL LOST?</button>
-        <img class="fig" src="img/nav2.png" alt="xxx." aria-hidden="true"/>
-</section>
-<!--maybe better to move script to seperate js file?-->
-<script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var fig = this.nextElementSibling;
-        if (fig.style.display === "flex") {
-            fig.style.display = "none";
-        } else {
-            fig.style.display = "flex";
-        }
-        });
-    }
-</script>
 </body>
 <footer>
     <p>&#9773; everything, for everyone, now.</p>
